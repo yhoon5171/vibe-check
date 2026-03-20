@@ -1,0 +1,45 @@
+{
+  "landing": {
+    "title": "Cosmic Aura & Vibe Check",
+    "subtitle": "Discover your cosmic signature, rarity tier, and find out who matches your vibe.",
+    "startBtn": "Start Vibe Check",
+    "compareBtn": "Compare with Friends"
+  },
+  "questions": {
+    "q1": { "text": "When you enter a room full of strangers...", "a": "Take center stage", "b": "Observe from the corner" },
+    "q2": { "text": "Your ideal weekend...", "a": "Adventuring outdoors", "b": "Cozying up indoors" },
+    "q3": { "text": "When making a tough decision...", "a": "Follow my heart", "b": "Analyze the facts" },
+    "q4": { "text": "In a group project, you are...", "a": "The leader", "b": "The background worker" },
+    "q5": { "text": "If you could time travel...", "a": "Go to the future", "b": "Revisit the past" },
+    "q6": { "text": "Your friends would describe you as...", "a": "Spontaneous", "b": "Reliable" },
+    "q7": { "text": "When faced with a sudden problem...", "a": "Act intuitively", "b": "Plan strategically" },
+    "q8": { "text": "Your desk is usually...", "a": "Organized chaos", "b": "Perfectly neat" },
+    "q9": { "text": "At a party, you prefer...", "a": "Meeting new people", "b": "Deep talks with old friends" },
+    "q10": { "text": "What inspires you the most?", "a": "Possibility and ideas", "b": "Real world mechanics" },
+    "q11": { "text": "When reading a book, you...", "a": "Skim to the end", "b": "Savor every word" },
+    "q12": { "text": "Choose a cosmic phenomenon...", "a": "Exploding Supernova", "b": "Mysterious Black Hole" }
+  },
+  "results": {
+    "types": {
+      "red": { "name": "Supernova Red", "meme": "Major Main Character Syndrome, literally runs the simulation.", "match": "Nebula Blue (98% Match)", "rarity": "1", "color": "#ff4081" },
+      "orange": { "name": "Cosmic Orange", "meme": "Absolute chaos bringer, but makes it look aesthetic.", "match": "Quasar Purple (95% Match)", "rarity": "4", "color": "#ff9100" },
+      "gold": { "name": "Solar Flare Gold", "meme": "The designated 'Golden Retriever' friend with zero brain cells but 100% vibes.", "match": "Event Horizon Black (85% Match)", "rarity": "8", "color": "#ffd700" },
+      "green": { "name": "Aurora Green", "meme": "Mother nature's favorite. Probably talks to plants.", "match": "Cosmic Orange (88% Match)", "rarity": "12", "color": "#00e676" },
+      "teal": { "name": "Comet Teal", "meme": "Always side-questing. Can't text back but will mail you a rock.", "match": "Supernova Red (90% Match)", "rarity": "6", "color": "#1de9b6" },
+      "blue": { "name": "Nebula Blue", "meme": "The Silent Observer. Knows all the tea, says nothing.", "match": "Solar Flare Gold (92% Match)", "rarity": "15", "color": "#00e5ff" },
+      "purple": { "name": "Quasar Purple", "meme": "Mysterious, majestic, and probably needs more sleep.", "match": "Aurora Green (94% Match)", "rarity": "3", "color": "#d500f9" },
+      "black": { "name": "Event Horizon Black", "meme": "Secretly toxic Villain Energy, but people love it.", "match": "Comet Teal (80% Match)", "rarity": "5", "color": "#8a2be2" },
+      "crimson": { "name": "Blazing Crimson", "meme": "Living life at 200mph. Here for a good time, not a long time.", "match": "Lunar Magenta (92% Match)", "rarity": "2", "color": "#ff1744" },
+      "white": { "name": "White Dwarf", "meme": "Dense, organized, and the only reason the group chat survives.", "match": "Quasar Purple (88% Match)", "rarity": "10", "color": "#ffffff" },
+      "pink": { "name": "Pulsar Pink", "meme": "Chaotic genius. Will debate you at 3 AM about nothing.", "match": "Aurora Green (95% Match)", "rarity": "7", "color": "#f50057" },
+      "magenta": { "name": "Lunar Magenta", "meme": "The mom friend with mystical vibes. Probably owns tarot cards.", "match": "Blazing Crimson (92% Match)", "rarity": "9", "color": "#e040fb" },
+      "cyan": { "name": "Rogue Cyan", "meme": "Unpredictable solo wanderer. Knows how to pick a lock.", "match": "Solar Flare Gold (89% Match)", "rarity": "14", "color": "#00b0ff" },
+      "silver": { "name": "Iron Silver", "meme": "Cold, calculated, and has a spreadsheet for everything.", "match": "Cosmic Orange (85% Match)", "rarity": "11", "color": "#b0bec5" },
+      "yellow": { "name": "Stardust Yellow", "meme": "Floating through life purely on aesthetics and good tunes.", "match": "Event Horizon Black (91% Match)", "rarity": "13", "color": "#ffeb3b" },
+      "indigo": { "name": "Solar Indigo", "meme": "Rare, deeply emotional, and sees right through your soul.", "match": "Pulsar Pink (97% Match)", "rarity": "1", "color": "#3d5afe" }
+    },
+    "rarity": "Top {0}% Rarity",
+    "matchLabel": "Soulmate Aura",
+    "matchBtn": "Share & Compare Match %"
+  }
+}
