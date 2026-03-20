@@ -21,6 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google AdSense Script */}
+        <Script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6226105948982626"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        
+        {/* Google Analytics Script */}
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID`} // 구글 애널리틱스 측정 ID로 교체하세요!

@@ -55,7 +55,7 @@ export default function VibeCheckApp() {
       script.onload = () => {
         try {
           if (!(window as any).Kakao.isInitialized()) {
-            (window as any).Kakao.init('REPLACE_WITH_YOUR_KAKAO_KEY'); // Requires actual API key
+            (window as any).Kakao.init('a96d63254f23fa0802e0839aca3bff8e'); // JS API Key
           }
         } catch(e) {}
       };
@@ -181,6 +181,29 @@ export default function VibeCheckApp() {
                 {t('landing.compareBtn')}
               </button>
             )}
+
+            {/* SEO Content for AdSense Approval */}
+            <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(0,0,0,0.3)', borderRadius: '16px', border: '1px solid var(--glass-border)', textAlign: 'left', width: '100%', maxWidth: '600px' }}>
+              <h3 style={{ color: 'var(--brand-neon)', marginBottom: '1rem', fontSize: '1.2rem' }}>About the Cosmic Aura & Vibe Check</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+                The Cosmic Aura & Vibe Check is a global personality assessment tool designed to map your unique psychological traits—inspired by the Myers-Briggs Type Indicator (MBTI) and deep color psychology—into one of 16 distinct "Cosmic Auras." By answering 12 carefully crafted behavioral questions, our algorithm calculates your cognitive functions including Extraversion vs. Introversion (Energy), Sensing vs. Intuition (Information Processing), Thinking vs. Feeling (Decision Making), and Judging vs. Perceiving (Tactics). 
+              </p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+                Each individual possesses a vibrational frequency that resonates with elemental phenomena. Are you the proactive and commanding <strong>Supernova Red</strong> (ENTJ), the chaotic and spontaneous <strong>Pulsar Pink</strong> (ENTP), or perhaps the mysterious and observant <strong>Nebula Blue</strong> (INFP)? Our state-of-the-art matrix does not just stop at identifying your aura; it connects you globally.
+              </p>
+              <h4 style={{ color: 'var(--brand-neon)', marginTop: '1.5rem', marginBottom: '0.8rem', fontSize: '1.1rem' }}>16 Archetypes of the Cosmic Matrix</h4>
+              <ul style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.8', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
+                <li><strong>Supernova Red & Blazing Crimson:</strong> Explosive, commanding, and dynamic energies that lead the universe.</li>
+                <li><strong>Cosmic Orange & Solar Flare Gold:</strong> Warm, socially magnetic forces that bind galaxies together.</li>
+                <li><strong>Pulsar Pink & Lunar Magenta:</strong> Radiating chaotic genius and mystical empathetic leadership.</li>
+                <li><strong>Aurora Green & Event Horizon Black:</strong> The silent protectors and the inevitable cosmic masterminds drawing everything in.</li>
+                <li>...and 8 more meticulously calculated planetary alignments waiting to be discovered.</li>
+              </ul>
+              <h4 style={{ color: 'var(--brand-neon)', marginTop: '1.5rem', marginBottom: '0.8rem', fontSize: '1.1rem' }}>How Compatibility Works</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                Sharing your Vibe Check link activates our proprietary Match Engine. When a friend completes the assessment through your unique URL, their result is cryptographically hashed against yours to compute a definitive "Vibe Match Percentage." This social comparison mechanic reveals underlying synergies between different personality archetypes, allowing you to find your true cosmic soulmates.
+              </p>
+            </div>
           </div>
           );
         })()}
@@ -294,10 +317,8 @@ export default function VibeCheckApp() {
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', width: '100%', marginTop: '0.5rem' }}>
               <button className="btn-cosmic" onClick={async () => {
-                const url = new URL(window.location.href);
-                url.searchParams.set('res', resultId || '');
-                const finalUrl = url.toString();
-                const shareData = { title: 'Cosmic Aura & Vibe Check', text: 'Check out my Cosmic Aura! Who matches my vibe?', url: finalUrl };
+                const finalUrl = `https://vibe-check-final-one.vercel.app/?res=${resultId || ''}`;
+                const shareData = { title: 'Cosmic Aura & Vibe Check', text: `My Aura is [${rName}]! Find out our Match %!`, url: finalUrl };
                 try { if (navigator.share) { await navigator.share(shareData); } else { navigator.clipboard.writeText(finalUrl); alert('Copied to clipboard!'); } } catch(e) {}
               }} style={{ margin: '0 auto', background: `linear-gradient(45deg, ${rColor}, #050510)` }}>
                 {t('results.matchBtn')}
@@ -327,8 +348,8 @@ export default function VibeCheckApp() {
                 </button>
                 {/* Kakao */}
                 <button title="Share on KakaoTalk" onClick={() => { 
-                  const u=new URL(window.location.href); u.searchParams.set('res', resultId || ''); 
-                  const finalUrl = u.toString();
+                  // 강제로 등록된 Vercel 도메인을 사용하여 카카오톡 공유 링크 생성
+                  const finalUrl = `https://vibe-check-final-one.vercel.app/?res=${resultId || ''}`;
                   if ((window as any).Kakao && (window as any).Kakao.isInitialized()) {
                     (window as any).Kakao.Share.sendDefault({
                       objectType: 'feed',
@@ -375,6 +396,19 @@ export default function VibeCheckApp() {
         })()}
 
       </div>
+
+      {/* Footer for Legal & AdSense */}
+      <footer style={{ marginTop: '3rem', padding: '2rem 1rem', width: '100%', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>
+        <p>© {new Date().getFullYear()} Cosmic Aura & Vibe Check. All rights reserved.</p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
+          <a href="#" onClick={(e) => { e.preventDefault(); alert('Privacy Policy: We do not collect or store any personal data. User inputs are processed entirely locally in your browser. All sharing is completely anonymous and stateless via URL parameters. This application serves Google AdSense and complies with personalized ad tracking cookies governed by Google LLC.'); }} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', cursor: 'pointer' }}>Privacy Policy</a>
+          <span>|</span>
+          <a href="#" onClick={(e) => { e.preventDefault(); alert('Terms of Service: By continuing to use this website, you agree that this application is provided for entertainment purposes only.'); }} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', cursor: 'pointer' }}>Terms of Service</a>
+          <span>|</span>
+          <a href="mailto:yhoon5171@naver.com" onClick={(e) => { e.preventDefault(); alert('For business inquiries or takedown requests, please email us directly at yhoon5171@naver.com'); }} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Contact Us</a>
+        </div>
+        <p style={{ marginTop: '1rem', fontSize: '0.7rem', color: 'rgba(255,255,255,0.3)' }}>Disclaimer: This test is for entertainment purposes only and is not a scientifically validated psychological assessment.</p>
+      </footer>
       
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
